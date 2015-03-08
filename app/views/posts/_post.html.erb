@@ -1,0 +1,24 @@
+<div class="blog-post">
+  <% unless action_name == 'show' %><h2 class="blog-post-title"><%= post.title %></h2><% end %>
+  <p class="blog-post-meta"><%= (post.published_at || post.created_at).strftime('%B %e, %Y') %> by <%= post.user.full_name %></p>
+
+  <%= markdown post.body %>
+  
+<% if user_signed_in? %>
+  <ul class="pagination">
+    <li><%= link_to t('posts.edit.title'), edit_post_path(post) %></li>
+  <% if post.published? %>
+    <li>
+      <%= link_to t('posts.unpublish.title'), unpublish_post_path(post), method: :put %>
+    </li>
+  <% else %>  
+    <li>
+      <%= link_to t('posts.publish.title'), publish_post_path(post), method: :put %>
+    </li>
+  <% end %>
+    <li>
+      <%= link_to t('general.destroy'), post_path(post), method: :delete, confirm: I18n.t('general.questions.are_you_sure') %>
+    </li>
+  </ul>
+<% end %>
+</div>

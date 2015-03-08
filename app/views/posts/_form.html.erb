@@ -1,0 +1,17 @@
+<%= simple_form_for(
+  resource, url: resource.new_record? ? posts_path : post_path(resource), 
+  method: resource.new_record? ? :post : :put, wrapper: :horizontal_form,
+  html: { class: 'form-horizontal', autocomplete: 'off' }
+ ) do |f| %>
+  <%= devise_error_messages! %>
+    
+  <%= f.input :title %>
+  <%= f.input :summary %> 
+  <%= f.input :body %>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">   
+      <%= f.button :submit %>
+    </div>
+  </div>
+<% end %>

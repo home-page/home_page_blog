@@ -1,0 +1,19 @@
+<% if @posts.none? %>
+  <p>
+    <%= t('posts.index.empty_collection') %>
+  </p>
+<% else %>
+  <%= render partial: 'posts/post', collection: @posts %>
+  
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+<% end %>
+
+<% if user_signed_in? %>
+<p>
+  <%= link_to t('posts.new.title'), new_post_path, class: 'btn btn-default' %>
+</p>
+<% end %>
+
+<% content_for :sidebar do %>
+  <%= render partial: 'posts/sidebar' %>
+<% end %>

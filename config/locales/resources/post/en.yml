@@ -1,0 +1,30 @@
+en:
+  posts:
+    index:
+      title: Posts
+      empty_collection: No posts available.
+      about_dummy: Dummy.
+      
+    new: 
+      title: New Post
+    edit: 
+      title: Edit Post
+    publish:
+      title: 'Publish'
+      successful: Post has been successfully published. 
+      unsuccessful: Post could not be published! 
+    unpublish:
+      title: 'Unpublish'
+      successful: Post has been successfully unpublished. 
+      unsuccessful: Post could not be unpublished! 
+            
+  activerecord:
+    models:
+      post: Post
+      
+    attributes:
+      post:
+        title: Title
+        summary: Summary
+        body: Body
+        published: Published?

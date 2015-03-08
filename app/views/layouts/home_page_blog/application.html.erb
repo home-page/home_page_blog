@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render partial: 'layouts/shared/head' %>
+  </head>
+  <body>
+    <%= render partial: 'layouts/shared/navigation' %> 
+    
+    <div class="container">
+      <%= render partial: 'layouts/shared/flash' %>
+      
+      <div class="blog-header">
+<% if @show_breadcrumbs %>
+        <%= breadcrumbs %><br/>
+<% end %> 
+        
+        <h1 class="blog-title"><%= t 'general.blog.title' %></h1>
+        <p class="lead blog-description"><%= t 'general.blog.sub_title' %></p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+          <%= yield %>
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <%= yield :sidebar %>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div>  
+    
+    <footer class="blog-footer">
+      <p>
+        <%= raw t('general.powered_by_home_page_software', link: link_to('Home-Page.Software', 'http://Home-Page.Software')) %>
+      </p>
+      <p>
+        <%= raw t(
+          'general.blog.template_built_by', 
+          twitter_bootstrap_link: '<a href="http://getbootstrap.com">Bootstrap</a>',
+          author_link: '<a href="https://twitter.com/mdo">@mdo</a>'
+        ) %>
+      </p>
+      <p>
+        <a href="#"><%= t('general.back_to_top') %></a>
+      </p>
+    </footer>
+    
+    <%= render partial: 'layouts/shared/foot' %>
+  </body>
+</html>

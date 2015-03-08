@@ -1,0 +1,10 @@
+en:
+  general:
+    blog:
+      title: My Blog
+      sub_title: Put e.g. your motto here.
+      sidebar:
+        about: About
+        about_body: Dummy
+        social_links: Social Links
+      template_built_by: Blog template built for %{twitter_bootstrap_link} by %{author_link}.

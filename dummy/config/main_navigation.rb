@@ -1,3 +1,3 @@
 SimpleNavigation::Configuration.run do |navigation|
-  instance_exec navigation, &HomePage::Navigation.code
+  instance_exec navigation, &HomePageBlog::Navigation.code
 end
