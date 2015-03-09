@@ -1,5 +1,5 @@
 <div class="blog-post">
-  <% unless action_name == 'show' %><h2 class="blog-post-title"><%= post.title %></h2><% end %>
+  <h2 class="blog-post-title"><%= post.title %></h2>
   <p class="blog-post-meta"><%= (post.published_at || post.created_at).strftime('%B %e, %Y') %> by <%= post.user.full_name %></p>
 
   <%= markdown post.body %>
