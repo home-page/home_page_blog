@@ -1,35 +1,5 @@
 module HomePageBlog
   module Navigation
-    class Base
-      @@menu_options = {}
-      
-      def self.add_menu_option(resource, option, value)
-        @@menu_options[resource] ||= {}
-        @@menu_options[resource][option] = value
-      end
-      
-      def self.menu_options(resource)
-        @@menu_options[resource] ||= {}
-        @@menu_options[resource]
-      end
-    end
-    
-    def self.code
-      Proc.new do |navigation|
-        navigation.items do |primary|
-          primary.dom_class = 'nav navbar-nav'
-          
-          [:posts, :users, :authentication].each do |resource|
-            if [:posts].include?(resource)
-              instance_exec primary, ::HomePageBlog::Navigation::Base.menu_options(resource), &::HomePageBlog::Navigation.menu_code(resource)
-            else
-              instance_exec primary, ::HomePage::Navigation::Base.menu_options(resource), &::HomePage::Navigation.menu_code(resource)
-            end
-          end
-        end
-      end
-    end
-    
     def self.menu_code(resource)
       case resource
       when :posts
