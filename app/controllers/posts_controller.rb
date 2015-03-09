@@ -6,6 +6,9 @@ class PostsController < ApplicationController
   before_filter :show_breadcrumbs, only: [:new, :show, :edit]
   
   def show
+    @home_page_stylesheets = ['home_page/application', 'home_page_blog/posts']
+    
+    render layout: 'home_page_blog/application'
   end
   
   def new
