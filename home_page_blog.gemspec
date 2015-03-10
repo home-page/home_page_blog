@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.2.0'
 
-  s.add_dependency 'home_page', '~> 0.0.3'
+  s.add_dependency 'home_page', '~> 0.0.4'
 
   s.add_development_dependency 'mysql2'
 end
