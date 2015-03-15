@@ -2,7 +2,7 @@ module HomePageBlog
   module Navigation
     def self.menu_code(resource)
       case resource
-      when :posts
+      when 'posts'
         Proc.new do |primary, options|
           primary.item :posts, I18n.t('posts.index.title'), posts_path do |posts|
             posts.item :new, I18n.t('general.new'), new_post_path
