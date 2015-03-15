@@ -1,1 +1,0 @@
-HomePage::Navigation::Base.items = [[:blog, :posts], :users, :authentication]
