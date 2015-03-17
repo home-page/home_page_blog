@@ -1,4 +1,3 @@
-<%= render partial: 'posts/sidebar/about' %>
-<%= render partial: 'posts/sidebar/social_links' %>
-<%= render partial: 'posts/sidebar/tags' %>
-<%= render partial: 'posts/sidebar/archive' %>
+<% @sidebar_modules.each do |page_module| %>
+  <%= render partial: page_module.partial_path %>
+<% end %>

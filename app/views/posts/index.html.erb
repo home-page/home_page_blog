@@ -10,10 +10,14 @@
 
 <% if user_signed_in? %>
 <p>
-  <%= link_to t('posts.new.title'), new_post_path, class: 'btn btn-default' %>
+  <%= link_to new_post_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-plus"></span> <%= t('posts.new.title') %>
+  <% end %>
 </p>
 <% end %>
 
-<% content_for :sidebar do %>
-  <%= render partial: 'posts/sidebar' %>
+<% if @sidebar_modules %>
+  <% content_for :sidebar do %>
+    <%= render partial: 'posts/sidebar' %>
+  <% end %>
 <% end %>

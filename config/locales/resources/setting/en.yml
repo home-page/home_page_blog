@@ -1,0 +1,10 @@
+en:
+  settings:
+    index:
+      plugins:
+        home_page_blog:
+          index:
+            title: Blog
+          tabs:
+            general:
+              title: General
