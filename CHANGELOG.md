@@ -1,6 +1,9 @@
 ## unreleased ##
 
-*   #29 Setups settings page with first core setting home_page.general.navigation.items.
+## 0.0.2 (March 18, 2015) ##
+
+*   Post sidebar will now be rendered through new page module collection.
+*   Installs migrations about settings model.
 
 ## 0.0.1 (March 10, 2015) ##
 

@@ -10,13 +10,13 @@ Gem::Specification.new do |s|
   s.authors     = ['Mathias Gawlista']
   s.email       = ['gawlista@gmail.com']
   s.homepage    = 'http://Blog.Home-Page.Software'
-  s.summary     = 'Blog module for home_page gem.'
-  s.description = 'Blog module for home_page gem.'
+  s.summary     = 'Blog plugin for Rails CMS gem home_page.'
+  s.description = 'Blog plugin for #Rails CMS http://Home-Page.Software'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
 
-  s.add_dependency 'home_page', '~> 0.0.5'
+  s.add_dependency 'home_page', '~> 0.0.6'
 
   s.add_development_dependency 'mysql2'
 end
