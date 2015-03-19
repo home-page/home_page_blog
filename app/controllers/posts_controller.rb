@@ -74,6 +74,8 @@ class PostsController < ApplicationController
   private
   
   def find_resource
-    @post = Post.friendly.find(params[:id])
+    @post = Post.friendly
+    @post = @post.where(published: true) unless user_signed_in?
+    @post = @post.find(params[:id])
   end
 end
