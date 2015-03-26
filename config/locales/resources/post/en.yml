@@ -1,7 +1,7 @@
 en:
   posts:
     index:
-      title: Posts
+      title: Blog
       empty_collection: No posts available.
       about_dummy: Dummy.
       
