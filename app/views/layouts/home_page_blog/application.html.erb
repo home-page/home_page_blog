@@ -36,22 +36,6 @@
 
     </div>  
     
-    <footer class="blog-footer">
-      <p>
-        <%= raw t('general.powered_by_home_page_software', link: link_to('Home-Page.Software', 'http://Home-Page.Software')) %>
-      </p>
-      <p>
-        <%= raw t(
-          'general.blog.template_built_by', 
-          twitter_bootstrap_link: '<a href="http://getbootstrap.com">Bootstrap</a>',
-          author_link: '<a href="https://twitter.com/mdo">@mdo</a>'
-        ) %>
-      </p>
-      <p>
-        <a href="#"><%= t('general.back_to_top') %></a>
-      </p>
-    </footer>
-    
     <%= render partial: 'layouts/shared/foot' %>
   </body>
 </html>
